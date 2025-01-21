@@ -28,7 +28,7 @@ const firebaseConfig = {
   };
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
-  
+
 // Add Task
 addTaskBtn.addEventListener("click", async () => {
   const task = taskInput.value.trim();
@@ -90,7 +90,7 @@ const sw = new URL("service-worker.js", import.meta.url);
 if ("serviceWorker" in navigator) {
   const s = navigator.serviceWorker;
   s.register(sw.href, {
-    scope: "/YOUR_REPOSITORY_NAME_HERE/",
+    scope: "/To-do-list/",
   })
     .then((_) =>
       console.log(
